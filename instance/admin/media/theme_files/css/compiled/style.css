@@ -1,0 +1,347 @@
+.required_field {
+  color: red;
+}
+
+.dataTables_length label,
+.dataTables_filter label {
+  display: contents !important;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.multiselect-control .btn-group {
+  display: block !important;
+  width: 100%;
+  height: calc(2.25rem + 2px);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+/*----------------genealogy-scroll----------*/
+
+.genealogy-scroll::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+}
+.genealogy-scroll::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #e4e4e4;
+}
+.genealogy-scroll::-webkit-scrollbar-thumb {
+  background: #212121;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.genealogy-scroll::-webkit-scrollbar-thumb:hover {
+  background: #d5b14c;
+  transition: 0.5s;
+}
+
+/*----------------genealogy-tree----------*/
+.genealogy-body {
+  white-space: nowrap;
+  overflow-y: hidden;
+  padding: 0px;
+  min-height: 100px;
+  text-align: center;
+}
+.genealogy-tree {
+  display: inline-block;
+}
+.genealogy-tree ul {
+  padding-top: 20px;
+  position: relative;
+  padding-left: 0px;
+  display: flex;
+  justify-content: center;
+}
+.genealogy-tree li {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 0px 0px 0px;
+}
+.genealogy-tree li::before,
+.genealogy-tree li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 2px solid #ccc;
+  width: 50%;
+  height: 18px;
+}
+.genealogy-tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 2px solid #ccc;
+}
+.genealogy-tree li:only-child::after,
+.genealogy-tree li:only-child::before {
+  display: none;
+}
+.genealogy-tree li:only-child {
+  padding-top: 0;
+}
+.genealogy-tree li:first-child::before,
+.genealogy-tree li:last-child::after {
+  border: 0 none;
+}
+.genealogy-tree li:last-child::before {
+  border-right: 2px solid #ccc;
+  border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+}
+.genealogy-tree li:first-child::after {
+  border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+}
+.genealogy-tree ul ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 2px solid #ccc;
+  width: 0;
+  height: 20px;
+}
+.genealogy-tree li a {
+  text-decoration: none;
+  color: #666;
+  font-family: arial, verdana, tahoma;
+  font-size: 11px;
+  display: inline-block;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  margin-left: 5px;
+}
+
+.genealogy-tree li a:hover + ul li::after,
+.genealogy-tree li a:hover + ul li::before,
+.genealogy-tree li a:hover + ul::before,
+.genealogy-tree li a:hover + ul ul::before {
+  border-color: #fbba00;
+}
+
+/*--------------memeber-card-design----------*/
+.member-view-box {
+  padding: 0px 20px;
+  text-align: center;
+  border-radius: 4px;
+  position: relative;
+}
+.member-image {
+  position: relative;
+  margin-top: 5px;
+}
+.member-image img {
+  width: 35px;
+  height: 35px;
+  border-radius: 6px;
+  background-color: #000;
+  z-index: 1;
+}
+
+.member-details p {
+  word-wrap: break-word;
+  padding-top: 10px;
+  overflow: hidden;
+}
+.active_child {
+  border: 3px solid #e2d74b;
+  padding-top: 3px;
+}
+.initial_box {
+  border: 3px solid #ffc977;
+  padding-top: 3px;
+}
+.curactive_child {
+  border: 3px solid #d27d40;
+  padding-top: 3px;
+}
+@-webkit-keyframes blinker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.4;
+  }
+}
+.active_child {
+  text-decoration: active_child;
+  /* -webkit-animation-name: blinker; */
+  -webkit-animation-duration: 0.6s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-direction: alternate;
+}
+
+.modal-backdrop.fade {
+  opacity: 0 !important;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0 !important;
+}
+.fade:not(.show) {
+  opacity: 1 !important;
+}
+.viewer-main-box {
+  text-align: center;
+  position: relative;
+  padding: 10px 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 7%),
+    0 10px 10px rgba(0, 0, 0, 9%);
+  -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 7%), 0 10px 10px rgba(0, 0, 0, 9%);
+  -ms-box-shadow: 0 14px 28px rgba(0, 0, 0, 7%), 0 10px 10px rgba(0, 0, 0, 9%);
+  -o-box-shadow: 0 14px 28px rgba(0, 0, 0, 7%), 0 10px 10px rgba(0, 0, 0, 9%);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 7%), 0 10px 10px rgba(0, 0, 0, 9%);
+  background-color: #fff;
+  margin-right: 5px;
+  width: 292px;
+  border-radius: 10px !important;
+}
+.popup-member-view-box {
+  text-align: center;
+  border-radius: 4px;
+  position: relative;
+}
+.popup-hei-first-row {
+  width: 100%;
+  height: 92px;
+  margin: 0px 15px 5px 15px;
+  border: 3px solid #ffc977;
+  padding: 3px;
+  border-radius: 10px;
+  color: #fff;
+  background: rgb(190, 124, 235);
+  background: linear-gradient(
+    90deg,
+    rgba(190, 124, 235, 1) 0%,
+    rgba(250, 127, 127, 1) 89%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+.popup-hei-first-row-img {
+  margin: 5px 0px;
+  width: 30%;
+}
+.popup-hei-first-row-desc {
+  text-align: left;
+  margin: 5px 0px 0px 5px;
+  width: 60%;
+}
+.popup-hei-first-row-title {
+  font-size: 15px;
+}
+.popup-hei-first-row-designation {
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+.popup-hei-second-row {
+  margin: 0px 0px 0px 21px;
+  width: 100%;
+  height: 70px;
+}
+.popup-hei-second-subrow {
+  padding-right: 6px;
+  padding-left: 4px;
+  height: 65px;
+  margin: 0px 0px 0px 3px;
+  border: 3px solid #ffc977;
+  border-radius: 10px;
+  text-align: center;
+}
+.popup-hei-second-subrow td {
+  padding: 10px 20px 0px 19px;
+}
+.popup-hei-subrow-count1 {
+  padding-top: 5px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.popup-hei-subrow-count2 {
+  margin-top: -63px;
+  padding-right: 0px;
+  padding-left: 37px;
+}
+.modal-body {
+  background: #eaeaea;
+}
+.hierarchy-viewer-li a {
+  width: 135px;
+  background: black;
+  color: #fff !important;
+}
+.parameters-list {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+.parameters-title {
+  background: #fff;
+  padding: 0 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.modal-opened {
+  background-color: #0707079c;
+}
+
+.icon-font {
+  color: #fff;
+  font-size: 25px;
+}
+
+.top-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.th-dark {
+  background-color: #1f4e78;
+  color: #fff;
+}
+
+.right-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.map-warp {
+  flex-grow: 1;
+  border: solid 0.15rem rgb(143, 143, 143);
+}
+.img-profile-warp {
+  /* flex-grow: 1; */
+  /* border: solid 0.15rem rgb(143, 143, 143); */
+  border-radius: 50%;
+  justify-content: center;
+  align-self: center;
+  width: 150px;
+  height: 150px;
+  background-color: rgb(230, 230, 230);
+}
+
+.circle-border {
+  border-radius: 50%;
+}
