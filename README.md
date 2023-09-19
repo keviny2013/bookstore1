@@ -24,3 +24,5 @@ After defining database credentials, now open your website's URL 
 
 **Step 4:**  
 The login Page will show and Login with your Username & Password.
+
+Also, make sure file creation permission should be allowed.
